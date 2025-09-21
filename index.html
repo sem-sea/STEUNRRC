@@ -1,14 +1,4 @@
-Hieronder staat je **volledige** HTML met aanpassing: de **ribbon** verschijnt **net boven (onder in code, maar visueel boven)** de sticky CTA, blijft **kort in beeld (6s)** en verdwijnt automatisch.
-Ik heb dit gedaan door:
 
-* De ribbon **onder** de sticky CTA te positioneren m.b.v. een CSS-variabele `--sticky-cta-h` (die we in JS dynamisch vullen met de actuele hoogte van de sticky CTA).
-* De ribbon een **lagere z-index** (59) te geven dan de sticky CTA (60), zodat de CTA altijd erboven ligt.
-* De **autohide-timer** terug te brengen naar **6000 ms**.
-* Fallback: als de sticky CTA niet zichtbaar is (desktop), valt de ribbon terug naar **16px** vanaf de onderkant.
-
-Plak dit 1-op-1:
-
-```html
 <!doctype html>
 <html lang="nl" data-lang="nl">
 <head> 
@@ -481,4 +471,3 @@ setLang('nl');
 
 </body>
 </html>
-```
